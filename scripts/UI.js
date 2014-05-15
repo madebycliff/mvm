@@ -16,23 +16,15 @@ var UI = (function(){
 		getImgSize($('#imagemain').attr('src'));
 
 		$("#imageOverlay").hide();
-		$("button").button();
+		//$("button").button();
 		$('#leftMenuBar button').removeAttr('onclick');
 
 		$('#galleryscroller').magnificPopup({
-			delegate: 'img',
+			delegate: 'div',
 			type: 'image',
 			gallery:{enabled:true}
 		});
 
-		$.get('info.php').done(
-			function(data){
-				$('#imageOverlay').html( data );
-				console.log(data);
-			}).error(function(data){
-				alert('Info loading error...');
-			}
-		);
 
 		responsiveLayout();
 
@@ -50,70 +42,49 @@ var UI = (function(){
 	}
 
 	$("#leftMenuBar button").on('click',function(e){
-		console.log(e.target, "verses", this);
 		var id = this.id;
 		console.log("toggling element #"+id+" with "+$("#"+id).hasClass("showingRight")+" showingRight class.");
 		
-		if ($("#"+id).hasClass("showingRight")){
+		if ($(this).hasClass("showingRight")){
 			$("#imageOverlay").hide();
-			$("#"+id).removeClass("showingRight")
+			$(this).removeClass("showingRight")
 			$('#imageAndOverlay').height( 'auto' );
 		} else {
 			$("#leftMenuBar .showingRight").removeClass("showingRight");
 			$("#imageOverlay").show(function(){
-				if (id == "aboutUs") {
+				if (id == "bio") {
 					$("#imageOverlay #infoAbout").siblings().hide();
-					$("#imageOverlay #infoAbout").show(500, heightMatch);
-					$("#"+id).addClass("showingRight");
-				} else if (id == "bookNow") {
+					$("#imageOverlay #infoAbout").show(500);
+					$(this).addClass("showingRight");
+				} else if (id == "events") {
 					$("#imageOverlay #infoBook").siblings().hide();
-					$("#imageOverlay #infoBook").show(500, heightMatch);
-					$("#"+id).addClass("showingRight");
-				} else if (id == "rooms") {
+					$("#imageOverlay #infoBook").show(500);
+					$(this).addClass("showingRight");
+				} else if (id == "tracks") {
 					$("#imageOverlay #infoRooms").siblings().hide();
-					$("#imageOverlay #infoRooms").show(500, heightMatch);
-					$("#"+id).addClass("showingRight");
-				} else if (id == "facilities") {
-					$("#imageOverlay #infoFacilities").siblings().hide();
-					$("#imageOverlay #infoFacilities").show(500, heightMatch);
-					$("#"+id).addClass("showingRight");
-				}  else if (id == "location") {
-					$("#imageOverlay #infoLocation").siblings().hide();
-					$("#imageOverlay #infoLocation").show(500, heightMatch);
-					$("#"+id).addClass("showingRight");
+					$("#imageOverlay #infoRooms").show(500);
+					$(this).addClass("showingRight");
 				} else if (id == "news") {
-					$("#imageOverlay #infoNews").siblings(500, heightMatch).hide();
-					$("#imageOverlay #infoNews").show();
-					$("#"+id).addClass("showingRight");
-				} else if (id == "friends") {
-					$("#imageOverlay #infoFriends").siblings().hide();
-					$("#imageOverlay #infoFriends").show(500, heightMatch);
-					$("#"+id).addClass("showingRight");
+					$("#imageOverlay #infoFacilities").siblings().hide();
+					$("#imageOverlay #infoFacilities").show(500);
+					$(this).addClass("showingRight");
+				}  else if (id == "friends") {
+					$("#imageOverlay #infoLocation").siblings().hide();
+					$("#imageOverlay #infoLocation").show(500);
+					$(this).addClass("showingRight");
+				} else if (id == "gallery") {
+					$("#imageOverlay #infoNews").siblings(500).hide();
+					$("#imageOverlay #infoNews").show(500);
+					$(this).addClass("showingRight");
 				} else if (id == "contactUs") {
 					$("#imageOverlay #infoContact").siblings().hide();
-					$("#imageOverlay #infoContact").show(500, heightMatch);
-					$("#"+id).addClass("showingRight");
+					$("#imageOverlay #infoContact").show(500);
+					$(this).addClass("showingRight");
 				}
 
 				$('#bodydiv').animate({scrollTop:$('#imageOverlay').offset().top}, 500);
 			});
 		}
-	});
-
-	heightMatch = function(){
-		if (LayoutIsVertical == true) {
-			overlayH =  Math.ceil($(this).height() * 1.05);
-			if (overlayH > $('#imagemain').height()) $('#imageAndOverlay').height( overlayH );
-			else $('#imageAndOverlay').height( 'auto' );
-		} else $('#imageAndOverlay').height( '98%' );
-	}
-
-	$("#gallery img").hover(function(e){
-		var description = $(this).attr('title');
-		$('#gallery h3').text('Gallery - '+description);
-	});
-	$("#content h3").hover(function(e){
-		$('#content h3').text('Gallery');
 	});
 
 	updateUI = function(){
@@ -138,7 +109,6 @@ var UI = (function(){
 			$('#imageAndTextHome #imageAndOverlay').height("auto");
 			LayoutIsVertical = true;
 		/*}*/
-		$('#testimonials #manual').width( bodyW - $('#testimonials #tripadvisorwidget').width() - 40);
 
 		//resize header and image if below min size
 		oldImgW = $('#imagemain').width();

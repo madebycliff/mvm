@@ -20,36 +20,36 @@
 	<script>window.jQuery || document.write( '<script src="../../AndorraBB/libs/jquery-1.10.2.min.js type="text/javascript"></script>')</script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script-->
 
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
 	<script src="libs/magnific-popup/mp.js"></script>
-
-	
-
 </head>
 
 <body>
 	<div id="bodydiv">
-		<div id="top">
+		<div id="left">
 		<!--  First Column -->
 			<div id="leftMenuBar">
 
 				<div id="leftMenuHeader">
-					VOYAGEUR
-					<img src="images/logoHeader.jpg" alt="VOYAGEUR">
+					<img src="images/logoHeader.jpg" alt="My Violet">
 				</div>
 
 				<div id="leftMenuButtons">
-					<button id="bio" class="button" title="About Voyageur" onclick="location.href='AboutUs.php';">
-						Biography</button>
+					<button id="bio" class="button" title="About My Violet" onclick="location.href='AboutUs.php';">
+						<span class="mvColour">My</span> Bio</button>
 					<button id="events" class="button" title="Our gigs, launches and appearances" onclick="location.href='BookNow.php';">
-						Events</button>
+						<span class="mvColour">My</span> Events</button>
 					<button id="tracks" class="button" title="Listen to some tunes" onclick="location.href='Rooms.php';">
-						Tracks</button>
+						<span class="mvColour">My</span> Tracks</button>
 					<button id="news" class="button" title="News and blogs" onclick="location.href='News.php';">
-						News</button>
+						<span class="mvColour">My</span> News</button>
 					<button id="friends" class="button" title="Labels, promoters, friends and contacts" onclick="location.href='Affiliates.php';">
-						Friends</button>
+						<span class="mvColour">My</span> Friends</button>
+					<button id="gallery" class="button" title="Our media gallery" onclick="location.href='Affiliates.php';">
+						<span class="mvColour">My</span> Photos</button>
 					<button id="contactUs" class="button" title="Contact us by email, phone or form" onclick="location.href='ContactUs.php';">
-						Contact Us</button>
+						<span class="mvColour">My</span> Contact</button>
 				</div>
 
 				<div id="leftMenuSocial">
@@ -57,16 +57,49 @@
 				</div>
 			</div>
 
-		</div><!--top-->
+		</div><!--left-->
 		<div id="content">
 
 			<div id="gallery" class="gallery">
-				<h3>Gallery</h3>
 				<div id="galleryscroller" class="scrollerdiv">
-					<img id="room1a" class="image" src="images/rooms/thumbnails/1a.jpg" 
-						href="images/rooms/1a.jpg" title="Room 1: 1st floor double and single room."></img>
+					<div id="headerPic3" class="image" style='background:url("images/gallery/3.jpg");background-size:cover;'
+						href="images/gallery/3.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic4" class="image" style='background:url("images/gallery/4.jpg");background-size:cover;'
+						href="images/gallery/4.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic6" class="image" style='background:url("images/gallery/6.jpg");background-size:cover;'
+						href="images/gallery/6.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic7" class="image" style='background:url("images/gallery/7.jpg");background-size:cover;'
+						href="images/gallery/7.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic8" class="image" style='background:url("images/gallery/8.jpg");background-size:cover;'
+						href="images/gallery/8.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic9" class="image" style='background:url("images/gallery/9.jpg");background-size:cover;'
+						href="images/gallery/9.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic10" class="image" style='background:url("images/gallery/10.jpg");background-size:cover;' 
+						href="images/gallery/10.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic13" class="image" style='background:url("images/gallery/13.jpg");background-size:cover;'
+						href="images/gallery/13.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic14" class="image" style='background:url("images/gallery/14.jpg");background-size:cover;'
+						href="images/gallery/14.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic11" class="image" style='background:url("images/gallery/11.jpg");background-size:cover;'
+						href="images/gallery/11.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic15" class="image" style='background:url("images/gallery/15.jpg");background-size:cover;'
+						href="images/gallery/15.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic16" class="image" style='background:url("images/gallery/16.jpg");background-size:cover;'
+						href="images/gallery/16.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic17" class="image" style='background:url("images/gallery/17.jpg");background-size:cover;'
+						href="images/gallery/17.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic5" class="image" style='background:url("images/gallery/5.jpg");background-size:cover;'
+						href="images/gallery/5.jpg" title="My Violet Music - Gallery."></div>
+					<div id="headerPic12" class="image" style='background:url("images/gallery/12.jpg");background-size:cover;'
+						href="images/gallery/12.jpg" title="My Violet Music - Gallery."></div>
+					
 				</div>
 			</div><!--gallery-->
+
+
+			<div id="homeContent">
+				<b>Welcome to the My Violet homepage.</b>
+			</div><!--testimonials-->
 
 
 			<div id="testimonials">
