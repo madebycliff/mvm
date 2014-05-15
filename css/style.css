@@ -1,0 +1,181 @@
+/*copyright james clifford 2013 for Andorra B&B, Dublin, Ireland www.andorrabb.com, www.jc-ae.com
+ */
+* {
+  margin: 0;
+}
+
+
+#bodydiv {
+  background-color: #fff9fc;
+  height: 100%;
+  overflow: auto;
+}
+#bodydiv h1 {
+  font-size: 50px;}
+#bodydiv h2 {
+  font-size: 40px;}
+#bodydiv h3 {
+  font-size: 30px;}
+a {
+  color:#ccaa22;
+}
+
+#top #leftMenuBar{
+  position: relative;
+  overflow: auto;
+  width:20%;
+  float: left;
+  padding-top: 25px;
+  background-color:black;
+  height:100%;
+  color:white;}
+  #leftMenuBar #leftMenuHeader{
+    text-align: left;
+    left:5%;
+    font-size: 30px;}
+    #leftMenuHeader img {
+      width:98%;}
+  #leftMenuBar #leftMenuButtons{
+    background-color:black;
+    padding:1%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color:white;
+    overflow: auto;}
+  #leftMenuButtons .button{
+    color: #ffffff;
+    text-align: left;
+    font-size: 20px;
+    position: relative;
+    margin-left: 1%;
+    margin-right: 1%;
+    float:left;
+    width: 98%;}
+    .button span{
+      padding:0px; }
+  #leftMenuBar #leftMenuSocial{
+    background-color:black;
+    position: absolute;
+    left:5%;
+    bottom:80px;
+    color:white;}
+  #imageandtextHome #imageAndOverlay {
+    width:60%;
+    min-width: 400px;
+    max-width: 1000px;
+    float: left;
+    position: relative;}
+    #imageAndOverlay #imagemain {
+      width: 96%;
+      float: left;
+      position: relative;
+      overflow:hidden;
+      margin: 2%;
+      }
+    #imageAndOverlay #imageOverlay{
+      color: #ffffff; 
+      font-size: 25px;
+      text-align: left;
+      overflow: auto;
+
+      padding: 2%;
+      height:96%;
+      width:96%;
+      max-width: 1000px;
+
+      position: absolute;
+      z-index: 1;
+      /* fallback */
+      background-color: #640010;
+      background-repeat: repeat-y;
+      background: rgba(100, 0, 16, .85);}
+      #imageOverlay h3{
+        font-family: AlexBrush, serif;
+        font-size: 40px;}
+      #imageOverlay .infoButton {
+        font-size: 15px; }
+        #imageOverlay .infoButton h3 {
+          font-size: 30px;
+          color: #ffffff; }
+
+
+
+#content {
+  clear:both;}
+#content #gallery {
+  clear:both;}
+  #gallery h3{
+    clear:both;
+    padding-left:1%;
+    font-family: AlexBrush, serif;
+    font-size: 40px;}
+  #gallery #galleryscroller{
+    position:relative;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    white-space: nowrap;
+    height:160;}
+    #galleryscroller img{
+      width:100px;
+      height: 100px;
+      margin-left: 1%;
+      margin-right: 1%;
+      border: 10px;
+      border-style: solid;
+      border-color:#501010;
+      padding: 1%;
+      }
+
+
+  
+
+
+
+#footerdiv {
+  color: #ffffff; 
+  font-family: AlexBrush, serif;
+  font-size: 30px;
+  position: absolute;
+  width: 100%;
+  height: 45px;
+  bottom: 0px;
+  
+  overflow: hidden;
+  background-color: black;
+  border-top-style: solid;
+  border-top-color: #009900;
+  clear: both;
+  z-index: 5;}
+  #footerdiv #thankYouText{
+    left: 2%;
+    top: 15%;
+    position: relative;}
+  #footerdiv #infoText {
+    font-family:ariel, sans-serif;
+    font-size: 15px;
+    text-align: right;
+    float: right;
+    position: absolute;
+    top: 5px;
+    right: 125px;
+    z-index:10;
+    background-color: black;}
+  #footerdiv #homeButton{
+    float: right;
+    position: absolute;
+    top: 1%;
+    right: 1%;}
+  #footerdiv #expandFooterIcon{
+    color: #ffffff;
+    float: right;
+    position: relative;}
+  #footerdiv .button{
+    height:100%;
+    position:relative;
+    /*background-color: #990020;*/
+  }
+
+
+
+
+  /*jQueryUI styling*/
